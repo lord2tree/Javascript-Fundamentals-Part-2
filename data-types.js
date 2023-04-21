@@ -1,10 +1,9 @@
 /*
-
 -----JAVASCRIPT.INFO-----
 
-Data types:
-There are eight basic data types in JavaScript. We can put any type in a variable. Programming languages that allow such things, such as JavaScript, are called “dynamically typed”, 
-meaning that there exist data types, but variables are not bound to any of them.
+DATA TYPES:
+  There are eight basic data types in JavaScript. We can put any type in a variable. Programming languages that allow such things, such as JavaScript, are called “dynamically typed”, 
+  meaning that there exist data types, but variables are not bound to any of them.
 
 1)  NUMBER:
       The number type represents both integer and floating point numbers. Besides regular numbers, there are so-called “special numeric values” which also belong to this data type: 
@@ -105,6 +104,5 @@ meaning that there exist data types, but variables are not bound to any of them.
         C)  The result of typeof alert is "function", because alert is a function. We’ll study functions in the next chapters where we’ll also see that there’s no special 
             “function” type in JavaScript. Functions belong to the object type. But typeof treats them differently, returning "function". That also comes from the early 
             days of JavaScript. Technically, such behavior isn’t correct, but can be convenient in practice.
-
 
 */

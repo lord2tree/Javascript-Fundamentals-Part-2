@@ -9,7 +9,7 @@
         const bigmouth = 'I\'ve got no right to take my place…';
         console.log(bigmouth);
 
-    Template Literals
+    TEMPLATE LITERALS
         A template literal looks just like a normal string, but instead of using single or double quote marks (' or "), you use backtick characters (`):
         const greeting = `Hello`;
         
@@ -203,5 +203,6 @@
     sup()	Displays a string as superscript text
 
     REFERENCES: (https://www.w3schools.com/jsref/jsref_obj_string.asp)
+    AN EXHAUSTIVE LIST OF METHODS THAT CAN BE USED ON STRINGS CAN BE FOUND HERE ---> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
 */
