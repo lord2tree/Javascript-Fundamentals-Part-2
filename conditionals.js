@@ -149,13 +149,25 @@
 
           alert( Boolean("non-empty string") ); // true
           alert( Boolean(null) ); // false
-
-
-
-
-
-
-
-
-
   */
+
+let requiredName = "Admin";
+let password = "TheMaster";
+
+let name = prompt("Who's there?", "Enter your name.");
+
+if (name == requiredName) {
+  enteredPassword = prompt("Password?", "Enter password.");
+
+  if (enteredPassword == password) {
+    alert("Welcome");
+  } else if (enteredPassword == "" || enteredPassword == null) {
+    alert("Cancelled");
+  } else {
+    alert("Wrong password");
+  }
+} else if (name == "" || name == null) {
+  alert("Cancelled");
+} else {
+  alert("I don't know you");
+}
