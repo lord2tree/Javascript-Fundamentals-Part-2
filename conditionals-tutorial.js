@@ -171,3 +171,267 @@ if (name == requiredName) {
 } else {
   alert("I don't know you");
 }
+
+/*
+-----MDN WEB DOCS-----
+
+  SWITCH STATEMENTS
+    If-else statements are good for making choices with complex conditions and requiring a significant amount of code to run. However, switch statements are better for simpler cases where 
+    you want to set a variable or print a statement depending on a condition, and have many choices. Switch statements take a single input value and execute the code corresponding to the 
+    matching choice. -- EXAMPLE:
+
+      switch (expression) {
+        case choice1:
+          run this code
+          break;
+
+        case choice2:
+          run this code instead
+          break;
+
+        // include as many cases as you like
+
+        default:
+          actually, just run this code
+      }
+
+    !!  The default keyword in a switch statement specifies the code to run if none of the cases match the input value. It follows the same code pattern as the cases but without a choice 
+    !!  after it, and no need for a break statement.
+
+  TERNARY OPERATOR
+    The ternary or conditional operator tests a condition and returns one value if it is true and another if it is false. It's a useful alternative to if...else blocks when you only have 
+    two choices to make. The pseudocode looks like this:  "condition ? run this code : run this code instead"   -- EXAMPLE:
+
+    const greeting = isBirthday
+    ? "Happy birthday Mrs. Smith — we hope you have a great day!"
+    : "Good morning Mrs. Smith.";
+
+    Here we have a variable called isBirthday — if this is true, we give our guest a happy birthday message; if not, we give her the standard daily greeting. The ternary operator is not just 
+    for setting variable values; you can also run functions, or lines of code — anything you like. -- EXAMPLE
+
+      <label for="theme">Select theme: </label>
+      <select id="theme">
+        <option value="white">White</option>
+        <option value="black">Black</option>
+      </select>
+
+      <h1>This is my website</h1>
+    
+      const select = document.querySelector("select");
+      const html = document.querySelector("html");
+      document.body.style.padding = "10px";
+
+      function update(bgColor, textColor) {
+        html.style.backgroundColor = bgColor;
+        html.style.color = textColor;
+      }
+
+      select.addEventListener("change", () =>
+        select.value === "black" ? update("black", "white") : update("white", "black")
+      );
+*/
+
+// ACTIVE LEARNING: A SIMPLE CALENDAR
+const select = document.querySelector("select");
+const list = document.querySelector("ul");
+const h1 = document.querySelector("h1");
+
+select.addEventListener("change", () => {
+  const choice = select.value;
+
+  // ADD CONDITIONAL HERE
+  days =
+    choice === "February"
+      ? 28
+      : choice === "April" || "June" || "September" || "November"
+      ? 30
+      : 31;
+  createCalendar(days, choice);
+});
+
+function createCalendar(days, choice) {
+  list.innerHTML = "";
+  h1.textContent = choice;
+  for (let i = 1; i <= days; i++) {
+    const listItem = document.createElement("li");
+    listItem.textContent = i;
+    list.appendChild(listItem);
+  }
+}
+
+createCalendar(31, "January");
+
+// ACTIVE LEARNING: MORE COLOR CHOICES
+const selectB = document.querySelector("select");
+const html = document.querySelector(".output");
+
+selectB.addEventListener("change", () => {
+  const choice = selectB.value;
+
+  // ADD SWITCH STATEMENT
+  switch (choice) {
+    case "white":
+      update("black", "white");
+      break;
+
+    case "black":
+      update("white", "black");
+      break;
+
+    case "purple":
+      update("yellow", "purple");
+      break;
+
+    case "yellow":
+      update("purple", "yellow");
+      break;
+
+    case "psychedelic":
+      update("orange", "psychedelic");
+      break;
+
+    default:
+      update("white", "black");
+  }
+});
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+/*
+
+
+-----JAVASCRIPT.INFO-----
+
+  MULTIPLE TERNARY OPERATORS
+    A sequence of question mark operators ? can return a value that depends on more than one condition.
+    
+ A}  For instance:
+
+    let age = prompt('age?', 18);
+    let message = (age < 3) ? 'Hi, baby!' :
+      (age < 18) ? 'Hello!' :
+      (age < 100) ? 'Greetings!' :
+      'What an unusual age!';
+    alert( message );
+
+ B)  Here’s how this looks using if..else:
+
+    if (age < 3) {
+      message = 'Hi, baby!';
+    } else if (age < 18) {
+      message = 'Hello!';
+    } else if (age < 100) {
+      message = 'Greetings!';
+    } else {
+      message = 'What an unusual age!';
+    }
+
+ C}  Non-traditional use of ‘?’
+     Sometimes the question mark ? is used as a replacement for if:
+
+    let company = prompt('Which company created JavaScript?', '');
+
+    (company == 'Netscape') ?
+      alert('Right!') : alert('Wrong.');
+    
+ D) Here is the same code using if for comparison:
+
+    let company = prompt('Which company created JavaScript?', '');
+
+    if (company == 'Netscape') {
+      alert('Right!');
+    } else {
+      alert('Wrong.');
+    }
+
+    */
+
+//  TASK: THE NAME OF JAVASCRIPT
+const ANSWER = "ECMAScript";
+let reply = prompt('What\'s the "official" name of javascript?');
+let resultA = reply == ANSWER ? "Right" : 'You don\'t know "ECMAScript"!';
+alert(resultA);
+
+//  TASK: SHOW THE SIGN
+let answer = prompt("Enter your number");
+resultB = answer > 0 ? 1 : answer < 0 ? -1 : 0;
+alert(resultB);
+
+// REWRITE 'IF' INTO '?'
+let resultC = a + b < 4 ? "Below" : "Over";
+
+// REWRITE 'IF..ELSE' INTO '?'
+let message =
+  login == "Employee"
+    ? "Hello"
+    : login == "Director"
+    ? "Greetings"
+    : login == ""
+    ? "No login"
+    : "";
+
+/*
+
+-----JAVASCRIPT.INFO-----
+
+  THE "SWITCH" STATEMENT
+    A switch statement can replace multiple if checks. It gives a more descriptive way to compare a value with multiple variants. The switch has one or more case blocks and an 
+    optional default.
+    
+    Type matters
+      Let’s emphasize that the equality check is always strict. The values must be of the same type to match.
+
+      For example, let’s consider the code:
+
+      let arg = prompt("Enter a value?");
+      switch (arg) {
+        case '0':
+        case '1':
+          alert( 'One or zero' );
+          break;
+
+        case '2':
+          alert( 'Two' );
+          break;
+
+        case 3:
+          alert( 'Never executes!' );
+          break;
+        default:
+          alert( 'An unknown value' );
+      }
+      For 0, 1, the first alert runs.
+      For 2 the second alert runs.
+      But for 3, the result of the prompt is a string "3", which is not strictly equal === to the number 3. So we’ve got a dead code in case 3! The default variant will execute.
+          
+*/
+
+// TASKS: REWRITE THE "SWITCH" INTO AN "IF"
+if (browser == "Edge") {
+  alert("You've got the Edge!");
+} else if (
+  browser == "Chrome" ||
+  browser == "Firefox" ||
+  browser == "Safari" ||
+  browser == "Opera"
+) {
+  alert("Okay we support these browsers too");
+} else alert("We hope that this page looks ok!");
+
+//TASK: REWRITE "IF" INTO "SWITCH"
+let a = +prompt("a?", "");
+switch (a) {
+  case 0:
+    alert(0);
+    break;
+  case 1:
+    alert(1);
+    break;
+  case 2:
+  case 3:
+    alert("2,3");
+    break;
+}

@@ -1,0 +1,91 @@
+https://www.theodinproject.com/lessons/foundations-fundamentals-part-2
+
+Knowledge Check: FUNDAMENTALS PART 1
+
+WHAT ARE THE EIGHT DATA TYPES IN JAVASCRIPT?
+There are seven primitive data types Number, BigInt, String, Boolean, Undefined, Null, Symbol, and one non-primitive Object
+
+
+WHICH DATA TYPE IS NOT PRIMITIVE?
+Object
+
+
+WHAT IS THE RELATIONSHIP BETWEEN NULL AND UNDEFINED?
+'Null' represents nothing, empty, or value unknown whereas 'undefined' means no value has been assigned. When an equality check is performed on the two -  they are considered equal. However any other equality check with null and something other than undefined will yield a false result. Lastly null will be treated like the number zero with any comparison. 
+
+
+WHAT IS THE DIFFERENCE BETWEEN SINGLE, DOUBLE, AND BACKTICK QUOTES FOR STRINGS?
+They all behave the same however backticks can accept variables wrapped inside of ${} characters.
+
+WHAT IS THE TERM FOR JOINING STRINGS TOGETHER?
+Concatenation or concatenating.
+
+
+WHICH TYPE OF QUOTE LETS YOU EMBED VARIABLES/EXPRESSIONS IN A STRING?
+Template Literals aka backticks.
+
+
+HOW DO YOU EMBED VARIABLES/EXPRESSIONS IN A STRING?
+Using template literals aka backticks.
+
+
+HOW DO YOU USE ESCAPE CHARACTERS IN A STRING?
+Using the backslash '\'
+
+
+WHAT IS THE DIFFERENCE BETWEEN THE SLICE/SUBSTRING/SUBSTR STRING METHODS?
+All three extract part of a string and return it in a new string however slice takes two arguments the start and the end position not including the end. Substring treats numbers less than zero as zero. Substr takes two arguments with the second being the length of the extracted part to be sliced out the string.
+
+
+WHAT ARE THE THREE LOGICAL OPERATORS AND WHAT DO THEY STAND FOR?
+There are three logical operators. Or operator represented by two vertical lines like this || - always chooses the first truthy value .And operator represented by two ampersands like this && - always chooses the first falsy value. Finally we have the Not operator represented by an exclamation point like this ! - Lastly sometimes a double not like this !! Is used to convert values to a boolean type.
+
+
+WHAT ARE THE COMPARISON OPERATORS?
+There are four >, <, >=, and <= (while == and === are equality operators.)
+
+
+WHAT ARE TRUTHY AND FALSY VALUES?
+Data types that resolve to true or false. Truthy values are any non zero number, any non empty string, the boolean true, and Objects. Falsy on the other hand are the number zero, empty strings, the boolean false, Null, Undefined, and NaN.
+
+
+WHAT ARE THE FALSY VALUES IN JAVASCRIPT?
+Falsy on the other hand are the number zero, empty strings, the boolean false, Null, Undefined, and NaN.
+
+
+WHAT ARE CONDITIONALS?
+Conditionals are points of decisions where code is executed based on a condition usually true or false like an if, else, else if statement. Ternary statement, and switch stataments. 
+
+
+WHAT IS THE SYNTAX FOR AN IF/ELSE CONDITIONAL?
+if(something meets my concdtion) {
+Execute this code
+}
+else{
+Otherwise execute this code
+}
+
+
+WHAT IS THE SYNTAX FOR A SWITCH STATEMENT?
+switch(if this condition matches the cases condition below) {
+Case conditionOne:
+Execute this code;
+Break;
+
+Case conditionTwo:
+Execute this code;
+Break;
+
+Default:
+Execute this code 
+}
+
+
+
+WHAT IS THE SYNTAX FOR A TERNARY OPERATOR?
+(Condition) ? Execute code if true : otherwise run this code
+
+
+WHAT IS NESTING?
+When something sits inside of something else
+
